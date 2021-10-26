@@ -50,12 +50,12 @@ public class MyArrayList {
     }
 
     public boolean add(int value, int index) {
-            array[index] = value;
+            array[index-1] = value;
             return true;
     }
 
     public boolean delete(int value) {
-        for (int i = 0; i <= size; i++) {
+        for (int i = 0; i < size; i++) {
             if (array[i] == value) {
                 for (int j = i; j < size; j++) {
                     array[j] = array[j+1];

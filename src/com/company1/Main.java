@@ -13,10 +13,15 @@ public class Main {
         list1.add(2);
         list1.add(3);
         list1.add(4);
+        list1.add(5);
+        list1.add(6);
+        list1.add(7);
+        list1.add(8);
+        list1.add(9);
+        list1.add(10);
+        list1.add(99,11);
 
-        System.out.println("Size = " + list1.size());
-
-        list1.delete(3);
+        list1.delete(5);
 
         list1.print();
     }
