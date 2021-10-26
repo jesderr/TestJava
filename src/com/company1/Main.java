@@ -19,7 +19,7 @@ public class Main {
         list1.add(8);
         list1.add(9);
         list1.add(10);
-        list1.add(99,11);
+        list1.add(99,0);
 
         list1.delete(5);
 

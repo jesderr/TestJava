@@ -50,8 +50,13 @@ public class MyArrayList {
     }
 
     public boolean add(int value, int index) {
+        if(index == 0){
+            array[index] = value;
+            return true;
+        }else{
             array[index-1] = value;
             return true;
+        }
     }
 
     public boolean delete(int value) {
