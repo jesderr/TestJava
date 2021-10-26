@@ -19,11 +19,12 @@ public class MyArrayList {
     }
 
     public boolean add(int value) {
-        /*if (size != capacity) {
+               /*
+        if (size != capacity) {
             array[size] = value;
             size++;
             return true;
-        } else if (size == capacity){
+        } else if (size == capacity) {
             capacity = ((capacity * 3) / 2) + 1;
             int[] array = new int[capacity];
             System.arraycopy(this.array, 0, array, 0, size);
@@ -31,10 +32,10 @@ public class MyArrayList {
             array[size] = value;
             size++;
             return true;
-        }else{
+        } else {
             return false;
         }
-         */
+        */
         if (size == capacity) {
             capacity = ((capacity * 3) / 2) + 1;
             int[] array = new int[capacity];
@@ -49,19 +50,17 @@ public class MyArrayList {
     }
 
     public boolean add(int value, int index) {
-        for (int i = 0; i < size; i++) {
-            if (i == index) {
-                array[i] = value;
-                return true;
-            }
-        }
-        return false;
+            array[index] = value;
+            return true;
     }
 
     public boolean delete(int value) {
-        for (int i = 0; i < size; i++) {
+        for (int i = 0; i <= size; i++) {
             if (array[i] == value) {
-                array[i] = 0;
+                for (int j = i; j < size; j++) {
+                    array[j] = array[j+1];
+                }
+                size--;
                 return true;
             }
         }
@@ -71,7 +70,7 @@ public class MyArrayList {
 
     public boolean contains(int value) {
         for (int i = 0; i < size; i++) {
-            if(array[i] == value) {
+            if (array[i] == value) {
                 return true;
             }
         }
@@ -84,8 +83,8 @@ public class MyArrayList {
     }
 
     public void print() {
-        for (int i : array) {
-            System.out.println(" Number = " + i);
+        for (int i = 0; i < size; i++) {
+            System.out.println("Array [" + i + "] = " + array[i]);
         }
         System.out.println("Capacity = " + capacity);
     }
