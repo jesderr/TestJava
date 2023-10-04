@@ -2,4 +2,5 @@
 ____
 ArrayList,LinkedList
 ____
-~~and testing java functions~~
+and testing git bash functions
+____
