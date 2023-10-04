@@ -2,5 +2,6 @@
 ____
 ArrayList,LinkedList
 ____
-and testing git bash functions
+git commit --amend --no-edit - добавляет новый !staged! файл
+git commit --amend -m 'message' - добавляет новый комментарий к комиту 
 ____
