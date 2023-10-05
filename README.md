@@ -17,3 +17,5 @@ ____
  - git branch 'name-of-branch' - создает новую ветку
  - git checkout 'name-of-branch' - переключение на ветку
  - git checkout -b 'name-of-branch' - создает ветку и сразу переключает на неё
+ - git branch -d 'name-of-branch' - удаление ветки(необходимо быть в другой ветке)
+ - git merge 'name-of-branch' - слияние ветки в одну(надо перейти сначала на главную, а потом смержить другую ветку)
