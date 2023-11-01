@@ -19,23 +19,6 @@ public class MyArrayList {
     }
 
     public boolean add(int value) {
-               /*
-        if (size != capacity) {
-            array[size] = value;
-            size++;
-            return true;
-        } else if (size == capacity) {
-            capacity = ((capacity * 3) / 2) + 1;
-            int[] array = new int[capacity];
-            System.arraycopy(this.array, 0, array, 0, size);
-            this.array = array;
-            array[size] = value;
-            size++;
-            return true;
-        } else {
-            return false;
-        }
-        */
         if (size == capacity) {
             capacity = ((capacity * 3) / 2) + 1;
             int[] array = new int[capacity];
@@ -50,7 +33,7 @@ public class MyArrayList {
     }
 
     public boolean add(int value, int index) {
-        array[index-1] = value;
+        array[index - 1] = value;
         return true;
     }
 
@@ -58,7 +41,7 @@ public class MyArrayList {
         for (int i = 0; i < size; i++) {
             if (array[i] == value) {
                 for (int j = i; j < size; j++) {
-                    array[j] = array[j+1];
+                    array[j] = array[j + 1];
                 }
                 size--;
                 return true;

@@ -1,28 +1,21 @@
 package com.company1;
 
-import java.util.ArrayList;
+import com.company1.patterns.observer.CatholicChurch;
+import com.company1.patterns.observer.Parishioner;
 
 public class Main {
     public static void main(String[] args) {
-        MyLinkedList list = new MyLinkedList();
+        CatholicChurch observable = new CatholicChurch();
+        Parishioner parishioner1 = new Parishioner("Aboba Abobovich");
+        Parishioner parishioner2 = new Parishioner("Aboba Abobovich II");
+        observable.addPropertyChangeListener(parishioner1);
+        observable.addPropertyChangeListener(parishioner2);
 
-        MyArrayList list1 = new MyArrayList();
+        observable.setNews("Дева Мария была девой");
+        observable.setNews("Дева Мария не была девой");
+        
+        observable.removePropertyChangeListener(parishioner1);
 
-        list1.add(0);
-        list1.add(1);
-        list1.add(2);
-        list1.add(3);
-        list1.add(4);
-        list1.add(5);
-        list1.add(6);
-        list1.add(7);
-        list1.add(8);
-        list1.add(9);
-        list1.add(10);
-        list1.add(99,0);
-
-        list1.delete(5);
-
-        list1.print();
+        observable.setNews("aboba I ymer");
     }
 }
