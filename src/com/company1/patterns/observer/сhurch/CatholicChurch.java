@@ -1,4 +1,4 @@
-package com.company1.patterns.observer;
+package com.company1.patterns.observer.сhurch;
 
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
